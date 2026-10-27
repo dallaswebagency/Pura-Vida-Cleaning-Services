@@ -147,11 +147,11 @@ h1,h2,h3{font-family:var(--display);line-height:1.04;letter-spacing:-.02em;font-
 .services .eyebrow{color:var(--leaf)}
 .services h2{font-size:clamp(2.2rem,4.2vw,3.7rem);margin-top:20px;max-width:640px}
 .services-top p{max-width:380px;color:rgba(255,255,255,.75)}
-.panels{display:flex;gap:16px;height:520px}
+.panels{display:flex;gap:16px;height:480px}
 .panel{position:relative;flex:1;border-radius:6px;overflow:hidden;padding:34px;display:flex;flex-direction:column;justify-content:space-between;transition:flex .5s cubic-bezier(.2,.7,.2,1);isolation:isolate}
 .panel:hover{flex:1.7}
-.panel svg.bgm{position:absolute;z-index:-1;right:-14%;top:-16%;width:120%;opacity:.4;transition:transform .6s}
-.panel:hover svg.bgm{transform:translateY(10px) scale(1.04)}
+.panel svg.bgm{position:absolute;z-index:-1;inset:0;width:100%;height:100%;transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.panel:hover svg.bgm{transform:scale(1.05);transform-origin:50% 100%}
 .panel .num{font-family:var(--display);font-weight:800;font-size:1rem;letter-spacing:.14em}
 .panel h3{font-size:clamp(1.9rem,2.8vw,2.7rem);margin-bottom:12px}
 .panel p{max-width:300px;font-size:.98rem}
@@ -364,17 +364,17 @@ h1,h2,h3{font-family:var(--display);line-height:1.04;letter-spacing:-.02em;font-
     </div>
     <div class="panels rv">
       <a class="panel p1" href="https://www.puravidacleaning.ca/residential">
-        <svg class="bgm" viewBox="0 0 400 300" fill="none"><polygon points="20,300 180,40 340,300" stroke="#26331a" stroke-width="2"/><polygon points="150,300 290,90 400,300" fill="#26331a" fill-opacity=".12" stroke="#26331a" stroke-width="2"/></svg>
+        <svg class="bgm" viewBox="0 0 400 480" preserveAspectRatio="xMidYMax slice" aria-hidden="true"><polygon points="-40,490 150,70 340,490" fill="#26331a" fill-opacity=".16"/><polygon points="140,490 300,170 460,490" fill="#26331a" fill-opacity=".12"/><polygon points="-100,490 40,260 180,490" fill="#26331a" fill-opacity=".12"/></svg>
         <span class="num">01</span>
         <div><h3>Residential</h3><p>Weekly, bi-weekly, monthly, or one-time cleanings for your home.</p><span class="go">View Residential <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
       </a>
       <a class="panel p2" href="https://www.puravidacleaning.ca/commercial">
-        <svg class="bgm" viewBox="0 0 400 300" fill="none"><polygon points="20,300 180,40 340,300" stroke="#b4df86" stroke-width="2"/><polygon points="150,300 290,90 400,300" fill="#b4df86" fill-opacity=".16" stroke="#b4df86" stroke-width="2"/></svg>
+        <svg class="bgm" viewBox="0 0 400 480" preserveAspectRatio="xMidYMax slice" aria-hidden="true"><polygon points="-40,490 150,70 340,490" fill="#b4df86" fill-opacity=".16"/><polygon points="140,490 300,170 460,490" fill="#b4df86" fill-opacity=".24"/><polygon points="-100,490 40,260 180,490" fill="#b4df86" fill-opacity=".24"/></svg>
         <span class="num">02</span>
         <div><h3>Commercial</h3><p>Customized cleaning solutions to meet your business's unique needs.</p><span class="go">View Commercial <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
       </a>
       <a class="panel p3" href="https://www.puravidacleaning.ca/post-construction">
-        <svg class="bgm" viewBox="0 0 400 300" fill="none"><polygon points="20,300 180,40 340,300" stroke="#6f8a3c" stroke-width="2"/><polygon points="150,300 290,90 400,300" fill="#8fcb4f" fill-opacity=".25" stroke="#6f8a3c" stroke-width="2"/></svg>
+        <svg class="bgm" viewBox="0 0 400 480" preserveAspectRatio="xMidYMax slice" aria-hidden="true"><polygon points="-40,490 150,70 340,490" fill="#8fcb4f" fill-opacity=".34"/><polygon points="140,490 300,170 460,490" fill="#6f8a3c" fill-opacity=".3"/><polygon points="-100,490 40,260 180,490" fill="#6f8a3c" fill-opacity=".3"/></svg>
         <span class="num">03</span>
         <div><h3>Post Construction</h3><p>Serving Duffield, Spruce Grove, Stony Plain, and the Edmonton area.</p><span class="go">View Post Construction <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
       </a>
