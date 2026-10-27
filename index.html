@@ -147,19 +147,22 @@ h1,h2,h3{font-family:var(--display);line-height:1.04;letter-spacing:-.02em;font-
 .services .eyebrow{color:var(--leaf)}
 .services h2{font-size:clamp(2.2rem,4.2vw,3.7rem);margin-top:20px;max-width:640px}
 .services-top p{max-width:380px;color:rgba(255,255,255,.75)}
-.panels{display:flex;gap:16px;height:480px}
-.panel{position:relative;flex:1;border-radius:6px;overflow:hidden;padding:34px;display:flex;flex-direction:column;justify-content:space-between;transition:flex .5s cubic-bezier(.2,.7,.2,1);isolation:isolate}
-.panel:hover{flex:1.7}
-.panel svg.bgm{position:absolute;z-index:-1;inset:0;width:100%;height:100%;transition:transform .6s cubic-bezier(.2,.7,.2,1)}
-.panel:hover svg.bgm{transform:scale(1.05);transform-origin:50% 100%}
-.panel .num{font-family:var(--display);font-weight:800;font-size:1rem;letter-spacing:.14em}
-.panel h3{font-size:clamp(1.9rem,2.8vw,2.7rem);margin-bottom:12px}
-.panel p{max-width:300px;font-size:.98rem}
-.panel .go{margin-top:22px;display:inline-flex;align-items:center;gap:10px;font-weight:700;border-bottom:2px solid currentColor;padding-bottom:3px;width:max-content}
-.panel .go svg{width:18px;height:18px;position:static;opacity:1;width:18px}
-.p1{background:var(--lime);color:var(--ink)}
-.p2{background:var(--olive);color:#fff}
-.p3{background:var(--cream);color:var(--ink)}
+.panels{display:flex;gap:16px;height:600px}
+.panel{position:relative;flex:1;border-radius:6px;overflow:hidden;display:flex;flex-direction:column;transition:flex .5s cubic-bezier(.2,.7,.2,1)}
+.panel:hover{flex:1.45}
+.panel .ph{position:relative;flex:1;min-height:0;overflow:hidden;background:var(--forest)}
+.panel .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+.panel:hover .ph img{transform:scale(1.06)}
+.panel .num{position:absolute;left:22px;top:22px;z-index:2;font-family:var(--display);font-weight:800;font-size:.95rem;letter-spacing:.14em;padding:8px 14px;border-radius:999px;background:var(--forest);color:#fff}
+.panel .info{position:relative;padding:28px 30px 30px}
+.panel .info svg.peak{position:absolute;right:26px;bottom:30px;width:56px;height:auto;opacity:.55}
+.panel h3{font-size:clamp(1.8rem,2.5vw,2.4rem);margin-bottom:10px}
+.panel p{max-width:320px;font-size:.98rem}
+.panel .go{margin-top:20px;display:inline-flex;align-items:center;gap:10px;font-weight:700;border-bottom:2px solid currentColor;padding-bottom:3px;width:max-content}
+.panel .go svg{width:18px;height:18px}
+.p1 .info{background:var(--lime);color:var(--ink)}
+.p2 .info{background:var(--olive);color:#fff}
+.p3 .info{background:var(--cream);color:var(--ink)}
 
 /* area */
 .area{background:var(--mist);padding:120px 0;position:relative;overflow:hidden}
@@ -222,7 +225,7 @@ h1,h2,h3{font-family:var(--display);line-height:1.04;letter-spacing:-.02em;font-
   .why-head{position:static}
   .about-photo{max-width:460px;margin-right:34px}
   .panels{flex-direction:column;height:auto}
-  .panel{min-height:300px}
+  .panel .ph{flex:none;height:260px}
   .panel:hover{flex:1}
   .footer-grid{grid-template-columns:1fr 1fr}
   .strip .wrap{grid-template-columns:1fr;gap:14px}
@@ -364,19 +367,16 @@ h1,h2,h3{font-family:var(--display);line-height:1.04;letter-spacing:-.02em;font-
     </div>
     <div class="panels rv">
       <a class="panel p1" href="https://www.puravidacleaning.ca/residential">
-        <svg class="bgm" viewBox="0 0 400 480" preserveAspectRatio="xMidYMax slice" aria-hidden="true"><polygon points="-40,490 150,70 340,490" fill="#26331a" fill-opacity=".16"/><polygon points="140,490 300,170 460,490" fill="#26331a" fill-opacity=".12"/><polygon points="-100,490 40,260 180,490" fill="#26331a" fill-opacity=".12"/></svg>
-        <span class="num">01</span>
-        <div><h3>Residential</h3><p>Weekly, bi-weekly, monthly, or one-time cleanings for your home.</p><span class="go">View Residential <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+        <div class="ph"><img src="assets/residential.jpg" alt="Bright, freshly cleaned kitchen with white quartz counters, lemons and a folded green microfiber cloth" style="object-position:50% 62%"><span class="num">01</span></div>
+        <div class="info"><svg class="peak" viewBox="0 0 60 40" fill="none" stroke="#26331a" stroke-width="2" aria-hidden="true"><polygon points="2,38 22,4 42,38"/><polygon points="26,38 42,14 58,38"/></svg><h3>Residential</h3><p>Weekly, bi-weekly, monthly, or one-time cleanings for your home.</p><span class="go">View Residential <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
       </a>
       <a class="panel p2" href="https://www.puravidacleaning.ca/commercial">
-        <svg class="bgm" viewBox="0 0 400 480" preserveAspectRatio="xMidYMax slice" aria-hidden="true"><polygon points="-40,490 150,70 340,490" fill="#b4df86" fill-opacity=".16"/><polygon points="140,490 300,170 460,490" fill="#b4df86" fill-opacity=".24"/><polygon points="-100,490 40,260 180,490" fill="#b4df86" fill-opacity=".24"/></svg>
-        <span class="num">02</span>
-        <div><h3>Commercial</h3><p>Customized cleaning solutions to meet your business's unique needs.</p><span class="go">View Commercial <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+        <div class="ph"><img src="assets/commercial.jpg" alt="Clean, modern open office with tidy desks and polished floors" style="object-position:50% 50%"><span class="num">02</span></div>
+        <div class="info"><svg class="peak" viewBox="0 0 60 40" fill="none" stroke="#b4df86" stroke-width="2" aria-hidden="true"><polygon points="2,38 22,4 42,38"/><polygon points="26,38 42,14 58,38"/></svg><h3>Commercial</h3><p>Customized cleaning solutions to meet your business's unique needs.</p><span class="go">View Commercial <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
       </a>
       <a class="panel p3" href="https://www.puravidacleaning.ca/post-construction">
-        <svg class="bgm" viewBox="0 0 400 480" preserveAspectRatio="xMidYMax slice" aria-hidden="true"><polygon points="-40,490 150,70 340,490" fill="#8fcb4f" fill-opacity=".34"/><polygon points="140,490 300,170 460,490" fill="#6f8a3c" fill-opacity=".3"/><polygon points="-100,490 40,260 180,490" fill="#6f8a3c" fill-opacity=".3"/></svg>
-        <span class="num">03</span>
-        <div><h3>Post Construction</h3><p>Serving Duffield, Spruce Grove, Stony Plain, and the Edmonton area.</p><span class="go">View Post Construction <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+        <div class="ph"><img src="assets/post-construction.jpg" alt="Empty newly built home interior with spotless hardwood floors and large windows" style="object-position:50% 60%"><span class="num">03</span></div>
+        <div class="info"><svg class="peak" viewBox="0 0 60 40" fill="none" stroke="#4e6228" stroke-width="2" aria-hidden="true"><polygon points="2,38 22,4 42,38"/><polygon points="26,38 42,14 58,38"/></svg><h3>Post Construction</h3><p>Serving Duffield, Spruce Grove, Stony Plain, and the Edmonton area.</p><span class="go">View Post Construction <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
       </a>
     </div>
   </div>
